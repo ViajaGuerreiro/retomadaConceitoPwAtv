@@ -1,0 +1,11 @@
+.fundo {
+    background-image: url(../img/eren_login.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fundo_log {
+    background-image: url(../img/eren_logado.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}

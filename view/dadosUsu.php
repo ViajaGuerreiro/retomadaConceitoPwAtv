@@ -17,9 +17,10 @@ $dados = mostrarDadosUsu($conexao);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>dadosUsuario</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="fundo_log">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -27,7 +28,7 @@ $dados = mostrarDadosUsu($conexao);
                     <a class="nav-link" href="../view/dadosUsu.php">Dados <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../controller/logout.php">Sair</a>
+                    <a class="nav-link" href="../controller/logout.php">Sair/Voltar</a>
                 </li>
             </ul>
         </div>
@@ -112,7 +113,7 @@ $dados = mostrarDadosUsu($conexao);
                     <input value="<?= $dados["cep"] ?>" required name="cep" type="text" class="form-control" id="cep" placeholder="_____-___" maxlength="8">
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary">Cadastrar/Alterar Dados</button>
+            <button type="submit" class="btn btn-primary">Salvar/Alterar Dados</button>
         </form>
     </div>
     <?php
