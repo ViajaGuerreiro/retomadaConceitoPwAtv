@@ -26,6 +26,9 @@ function mostrarDadosUsu($conexao) {
     $resultado = mysqli_query($conexao, $query);
 
     $dadosUsu = mysqli_fetch_assoc($resultado);
-return $dadosUsu;
+
+    if($dadosUsu != null) {
+        return $dadosUsu;
+    }
 }
 ?>

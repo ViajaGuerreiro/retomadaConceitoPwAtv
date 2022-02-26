@@ -25,17 +25,21 @@ if($row == 1) {
 
         $_SESSION['usuario'] = $linha['usuario'];
         $_SESSION['idusuario'] = $linha['codcadastro'];
+
+        $_SESSION['tentativas'] = 0;
         
         header("Location: ../view/dadosUsu.php");
         exit();
     }else {
         $_SESSION['senha_incorreta'] = true;
+        $_SESSION['tentativas']++;
         header("Location: ../view/login.php");
         exit();
     }
 } 
 else {
     $_SESSION['nao_autenticado'] = true;
+    $_SESSION['tentativas']++;
     header("Location: ../view/login.php");
     exit();
 }
